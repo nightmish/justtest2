@@ -4,6 +4,12 @@ titile text color #eb00dd
 other text color rgba(235, 0, 221, 0.8)
 accent color #ffa438
 */
+
+/*font-family
+'Stalinist One', cursive;
+'Press Start 2P', cursive;
+*/
+
 :root {
   --primary-text-color: rgba(235, 0, 221, 0.8);
   --titile-text-color: #eb00dd;
@@ -27,6 +33,8 @@ p {
 /*header*/
 .logo {
   color: var(--accent-text-color);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
 }
 .main-nav .link {
   color: var(--primary-text-color);

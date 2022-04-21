@@ -1,10 +1,17 @@
+/*site colors
+bg color #130d30
+titile text color #eb00dd
+other text color rgba(235, 0, 221, 0.8)
+accent color #ffa438
+*/
 :root {
   --primary-text-color: rgba(235, 0, 221, 0.8);
   --titile-text-color: #eb00dd;
   --accent-text-color: #ffa438;
+  --primary-bg-color: #130d30;
 }
 body {
-  background-color: #130d30;
+  background-color: var(--primary-bg-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--primary-text-color);
 }
@@ -28,6 +35,7 @@ p {
 .main-nav .link:focus {
   color: var(--accent-text-color);
 }
+.main-nav .link.current {color:var(--accent-text-color)}
 /*hero*/
 .hero-title {
   color: var(--titile-text-color);
@@ -39,6 +47,17 @@ p {
 .features .title {
   color: var(--titile-text-color);
 }
-.features .link {
+}
+/*button*/
+.button {
+  color: var(--titile-text-color);
+  background-color: var(--primary-bg-color);
+}
+.button.primary {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-text-color);
+}
+.button.second {
   color: var(--accent-text-color);
+  background-color: var(--primary-bg-color);
 }

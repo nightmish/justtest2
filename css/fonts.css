@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Hybrid';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/hybridoutline-nreg-webfont.woff') format('woff'),
+    url('../fonts/hybridoutline-nreg-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Akashi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/akashi-kgwd-webfont.woff') format('woff'),
+    url('../fonts/akashi-kgwd-webfont.woff2') format('woff2');
+}

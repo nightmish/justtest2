@@ -6,60 +6,97 @@ accent color #ffa438
 */
 
 /*font-family
-'Stalinist One', cursive;
-'Press Start 2P', cursive;
+font-family: 'Iceland', cursive;
+font-family: 'Press Start 2P', cursive;
 */
 
+/*block-model*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root {
   --primary-text-color: rgba(235, 0, 221, 0.8);
   --titile-text-color: #eb00dd;
   --accent-text-color: #ffa438;
   --primary-bg-color: #130d30;
 }
-body {
-  background-color: var(--primary-bg-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--primary-text-color);
-}
-a {
-  text-decoration: none;
-}
-p {
-  font-size: 19px;
-}
-.list {
-  list-style: none;
-}
 /*header*/
 .logo {
   color: var(--accent-text-color);
-  font-family: 'Press Start 2P', cursive;
-  font-size: 24px;
+  font-family: 'Akashi', normal;
+  font-size: 32px;
+  line-height: 1.5em;
+  margin: 24px 0;
+  text-transform: uppercase;
 }
 .main-nav .link {
   color: var(--primary-text-color);
+  line-height: 24px;
+  margin: 24px 0;
+  text-transform: uppercase;
 }
 .main-nav .link:hover,
 .main-nav .link:focus {
   color: var(--accent-text-color);
 }
-.main-nav .link.current {color:var(--accent-text-color)}
+.main-nav .link.current {
+  color: var(--accent-text-color);
+}
+/*body style*/
+body {
+  background-color: var(--primary-bg-color);
+  font-family: 'Iceland', cursive;
+  font-size: 200%;
+  color: var(--primary-text-color);
+  letter-spacing: -0.015em;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 32px;
+  line-height: 1.2em;
+}
+.list {
+  list-style: none;
+}
+
 /*hero*/
 .hero-title {
   color: var(--titile-text-color);
+  font-size: 54px;
+  line-height: 1.3em;
+  text-align: center;
+  text-transform: uppercase;
 }
+
 /* section*/
 .section-title {
   color: var(--titile-text-color);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
 }
 .features .title {
   color: var(--titile-text-color);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 24px 0;
+  text-transform: uppercase;
 }
-}
+
 /*button*/
 .button {
   color: var(--titile-text-color);
   background-color: var(--primary-bg-color);
+  line-height: 24px;
+  margin: 24px 0;
+  text-transform: uppercase;
 }
 .button.primary {
   color: var(--primary-bg-color);

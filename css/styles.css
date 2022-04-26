@@ -11,10 +11,15 @@ font-family: 'Press Start 2P', cursive;
 */
 
 /*block-model*/
+
+html {
+  box-sizing: border-box;
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
+  outline: 1px solid red;
 }
 :root {
   --primary-text-color: rgba(235, 0, 221, 0.8);
@@ -23,18 +28,48 @@ font-family: 'Press Start 2P', cursive;
   --primary-bg-color: #130d30;
 }
 /*header*/
-.logo {
+
+
+.navigation {
+  width:1440px;
+  padding:0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-self:center;
+  height: 100px;
+  
+}
+.logotype {
+  display: flex;
+  align-items: center;
+}
+
+a.logo {
+  
   color: var(--accent-text-color);
-  font-family: 'Akashi', normal;
-  font-size: 32px;
-  line-height: 1.5em;
-  margin: 24px 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  line-height: 1.6em;
   text-transform: uppercase;
+}
+
+.logoimage {
+display: block;
+}
+.main-nav {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.link-box {
+  padding:15px 15px;
+  
+ 
 }
 .main-nav .link {
   color: var(--primary-text-color);
-  line-height: 24px;
-  margin: 24px 0;
+  line-height: 1.2em;
   text-transform: uppercase;
 }
 .main-nav .link:hover,
@@ -44,8 +79,14 @@ font-family: 'Press Start 2P', cursive;
 .main-nav .link.current {
   color: var(--accent-text-color);
 }
-/*body style*/
+
+.auth-nav {
+  display: flex;
+  align-items: center;
+}
+/*body style and elements*/
 body {
+  margin: 0;
   background-color: var(--primary-bg-color);
   font-family: 'Iceland', cursive;
   font-size: 200%;
@@ -56,14 +97,27 @@ a {
   text-decoration: none;
 }
 p {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.2em;
 }
+ul {
+   padding-inline-start: 0;
+   margin:0%
+   }
 .list {
   list-style: none;
 }
 
+.container {
+  width:1440px;
+  margin:0 auto;
+  padding: 0 20px;
+}
+
 /*hero*/
+h1.hero-title {
+  margin:0
+}
 .hero-title {
   color: var(--titile-text-color);
   font-size: 54px;
@@ -74,6 +128,7 @@ p {
 
 /* section*/
 .section-title {
+  margin:0;
   color: var(--titile-text-color);
   font-weight: 400;
   font-size: 48px;
@@ -83,19 +138,18 @@ p {
 }
 .features .title {
   color: var(--titile-text-color);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 24px;
-  margin: 24px 0;
+  line-height: 1.2em;
   text-transform: uppercase;
 }
 
 /*button*/
 .button {
+  display: inline-block;
   color: var(--titile-text-color);
   background-color: var(--primary-bg-color);
-  line-height: 24px;
-  margin: 24px 0;
+  line-height: 1.2em;
   text-transform: uppercase;
 }
 .button.primary {

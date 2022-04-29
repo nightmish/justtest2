@@ -12,7 +12,6 @@ font-family: 'Press Start 2P', cursive;
 */
 
 /*block-model*/
-
 html {
   box-sizing: border-box;
 }
@@ -29,6 +28,7 @@ html {
   --primary-bg-color: #130d30;
   --seconary-bg-color: #230646;
 }
+
 /*body style and elements*/
 body {
   margin: 0;
@@ -107,11 +107,11 @@ li.linkbox {
   padding:0px
 }
 .main-nav .link-box + .link-box{
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .main-nav .link {
   display: block;
-  min-width: 180px;
+  min-width: 170px;
   padding: 5px;
   border-radius: 6px;
   color: var(--primary-text-color);
@@ -133,10 +133,7 @@ li.linkbox {
   margin-left: auto;
 }
 .auth-nav .link-box + .link-box {
-  margin-left: 10px;
-}
-.auth-nav .button{
-  min-width: 120px;
+  margin-left: 5px;
 }
 .button {
 display:inline-block;
@@ -148,6 +145,7 @@ text-align: center;
 padding: 5px;
 border:1px solid transparent;
 border-radius: 6px;
+min-width: 155px;
 }
 .button.primary {
   color: var(--primary-bg-color);
@@ -158,6 +156,7 @@ border-radius: 6px;
   background-color: var(--primary-bg-color);
   border-color:  #ffa438;
 }
+
 /*hero*/
 .hero{
   text-align: center;
@@ -168,12 +167,10 @@ h1.hero-title {
   font-size: 60px;
   text-transform: uppercase;
 }
-/* section*/
 
+/* section styles*/
 .section{
   padding-top: 100px;
-
-  
 }
 .section.no-padding {
   padding-top: 0px;
@@ -192,6 +189,7 @@ h1.hero-title {
   margin-bottom: 60px;
   font-size: 48px;
 }
+/*features section*/
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -204,8 +202,6 @@ h1.hero-title {
 .features .item:nth-child(even){
   margin-left: auto;
 }
-
-
 .features .title {
   margin-bottom: 24px;
   color: var(--titile-text-color);
@@ -218,9 +214,10 @@ h1.hero-title {
 .features p{
  margin-bottom: 32px;
 }
+
+/*dovestypes section*/
 .dovetypes .list{
   display: flex;
- 
 }
 .dovetypes .title {
   margin-bottom: 24px;
@@ -250,30 +247,43 @@ h1.hero-title {
 }
 .dovetypes > .item:nth-child(2n+1) .content {
   margin-left: 100px;
-  
 }
+/*buy Section*/
+.container.flex
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container > .buycall
+{
+  flex-basis: 680px;
+  font-size: 48px;
+}
+.buy-nav{
+  display: flex;
+  width: 680px;
+  justify-content: space-evenly;
+}
+/*merch section*/
 .merch {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  width: 1400px;
+  
 }
-.merch .item
- {width: 250px;
-margin: 25px;
+.merch .item {
+flex-basis: calc((100% - 20px)/3); 
+margin-right:10px;
+margin-bottom: 10px;
 }
-.buy-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.merch .item:nth-child(3n) {
+  margin-right: 0;
 }
+.merch .item:nth-last-child(-n+3)
 
-.buysection {
-  display:flex;
-  justify-content: center;
-}
 /*footer*/
 .page-footer {
   background-color: var(--primary-bg-color);
@@ -298,8 +308,6 @@ margin: 25px;
   align-items: center;
   min-width: 450px;
 }
-
-
 .footer-nav .link {
   font-size: 30px;
   display: block;
@@ -319,6 +327,7 @@ margin: 25px;
   min-width: 450px;
   text-align: center;
 }
+
 /*Tools*/
 .left
 {text-align: left;}

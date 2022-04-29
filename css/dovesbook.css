@@ -1,3 +1,19 @@
 .buttons{
     padding: 20px 0;
 }
+
+.doves-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.doves-tab {
+   width: 350px;
+}
+
+.bookimg {
+    display: block;
+    width: 350px;
+}

@@ -1,5 +1,6 @@
 /*site colors
 bg color #130d30
+2nd bg color #230646;
 titile text color #eb00dd
 other text color rgba(235, 0, 221, 0.8)
 accent color #ffa438
@@ -26,13 +27,14 @@ html {
   --titile-text-color: #eb00dd;
   --accent-text-color: #ffa438;
   --primary-bg-color: #130d30;
+  --seconary-bg-color: #230646;
 }
 /*body style and elements*/
 body {
   margin: 0;
   background-color: black;
   font-family: 'Iceland', cursive;
-  font-size: 200%;
+  font-size: 30px;
   color: var(--primary-text-color);
   letter-spacing: -0.015em;
 }
@@ -44,7 +46,7 @@ a {
 }
 p {
   margin: 0;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.2em;
 }
 ul {
@@ -64,7 +66,8 @@ ul {
 }
 .container.padding
 {padding-top: 3opx;
-padding-bottom: 30px;}
+padding-bottom: 30px;
+}
 
 /*header*/
 .page-header{
@@ -75,7 +78,7 @@ padding-bottom: 30px;}
   padding:0 20px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  
   align-self:center;
   height: 100px;
 }
@@ -95,16 +98,19 @@ a.logo {
   text-transform: uppercase;
 }
 .main-nav {
-  width: 760px;
   display: flex;
   justify-content:space-evenly;
   align-items: center;
+  margin-left: auto;
 }
 li.linkbox {
   padding:0px
 }
+.main-nav .link-box + .link-box{
+  margin-left: 10px;
+}
 .main-nav .link {
-  display: inline-block;
+  display: block;
   min-width: 180px;
   padding: 5px;
   border-radius: 6px;
@@ -122,15 +128,18 @@ li.linkbox {
 }
 .auth-nav {
   display: flex;
-  width: 260px;
-  justify-content: space-evenly;;
+  justify-content: space-evenly;
   align-items: center;
+  margin-left: auto;
+}
+.auth-nav .link-box + .link-box {
+  margin-left: 10px;
 }
 .auth-nav .button{
   min-width: 120px;
 }
 .button {
-display: inline-block;
+display:inline-block;
 color: var(--titile-text-color);
 background-color: var(--primary-bg-color);
 line-height: 1.2em;
@@ -183,6 +192,20 @@ h1.hero-title {
   margin-bottom: 60px;
   font-size: 48px;
 }
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+.features .item 
+{
+  width: 640px;
+  margin-bottom:60px;
+}
+.features .item:nth-child(even){
+  margin-left: auto;
+}
+
+
 .features .title {
   margin-bottom: 24px;
   color: var(--titile-text-color);
@@ -190,9 +213,14 @@ h1.hero-title {
   font-weight: 700;
   line-height: 1.2em;
   text-transform: uppercase;
+  text-align: left;
 }
 .features p{
  margin-bottom: 32px;
+}
+.dovetypes .list{
+  display: flex;
+ 
 }
 .dovetypes .title {
   margin-bottom: 24px;
@@ -207,9 +235,90 @@ h1.hero-title {
 }
 .dovetypes > .item
 {
+  align-items: center;
+  display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
+  background-color: var(--primary-bg-color);
 }
 .dovetypes > .item:nth-child(2n){
-  background: black;
+  flex-direction: row-reverse;
+  background: var(--seconary-bg-color);
 }
+.dovetypes > .item:nth-child(2n) .content {
+  margin-right: 100px;
+}
+.dovetypes > .item:nth-child(2n+1) .content {
+  margin-left: 100px;
+  
+}
+.merch {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+.merch .item
+ {width: 250px;
+margin: 25px;
+}
+.buy-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buysection {
+  display:flex;
+  justify-content: center;
+}
+/*footer*/
+.page-footer {
+  background-color: var(--primary-bg-color);
+}
+.fnavigation {
+  width:1440px;
+  padding:0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-self:center;
+  height: 100px;
+}
+.social-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 450px;
+}
+
+
+.footer-nav .link {
+  font-size: 30px;
+  display: block;
+  min-width: 100px;
+  padding: 1px;
+  color: var(--primary-text-color);
+  line-height: 1.2em;
+  text-align: center;
+}
+.footer-nav .link-box + .link-box{
+  margin-left: 10px;
+}
+.copyright
+{
+  display: flex;
+  align-items: center;
+  min-width: 450px;
+  text-align: center;
+}
+/*Tools*/
+.left
+{text-align: left;}

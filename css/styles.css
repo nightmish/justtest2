@@ -27,6 +27,8 @@ html {
   --accent-text-color: #ffa438;
   --primary-bg-color: #130d30;
   --seconary-bg-color: #230646;
+  --merchset-gap: 20px;
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); 
 }
 
 /*body style and elements*/
@@ -68,7 +70,11 @@ ul {
 {padding-top: 3opx;
 padding-bottom: 30px;
 }
-
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /*header*/
 .page-header{
   background-color: var(--primary-bg-color);
@@ -88,6 +94,9 @@ padding-bottom: 30px;
 }
 .logoimage {
   display: block;
+  width: 100px;
+  height: 100px;
+  
   }
 a.logo {
   display: inline-block;
@@ -234,8 +243,8 @@ h1.hero-title {
 {
   align-items: center;
   display: flex;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: var(--primary-bg-color);
 }
 .dovetypes > .item:nth-child(2n){
@@ -331,3 +340,5 @@ margin-bottom: 10px;
 /*Tools*/
 .left
 {text-align: left;}
+
+

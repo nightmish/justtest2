@@ -1,0 +1,30 @@
+.merchset {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--merchset-gap));
+    margin-top: calc(-1 * var(--merchset-gap));
+}
+.merchset > .item {
+    flex-basis: calc(100% / 3 - var(--merchset-gap));
+    margin-left: var(--merchset-gap);
+    margin-top: var(--merchset-gap);
+}
+.card-content {
+    background-color:white;
+    color:black;
+    padding: 10px;
+}
+.card-text {
+    margin-top: 10px;
+}
+
+.card {
+    
+    box-shadow: var(--card-shadow);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+h2.buycall {
+    padding-bottom: 50px;
+}

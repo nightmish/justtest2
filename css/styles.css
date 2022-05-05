@@ -9,6 +9,7 @@ accent color #ffa438
 /*font-family
 font-family: 'Iceland', cursive;
 font-family: 'Press Start 2P', cursive;
+font-family: 'Fieldguide', cursive;
 */
 
 /*block-model*/
@@ -35,6 +36,8 @@ html {
 body {
   margin: 0;
   background-color: black;
+  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+  background-repeat: no-repeat;
   font-family: 'Iceland', cursive;
   font-size: 30px;
   color: var(--primary-text-color);
@@ -66,6 +69,8 @@ ul {
   margin:0 auto;
   padding: 0 20px;
 }
+
+
 .container.padding
 {padding-top: 3opx;
 padding-bottom: 30px;
@@ -77,16 +82,16 @@ img{
 }
 /*header*/
 .page-header{
-  background-color: var(--primary-bg-color);
+  background:transparent;
 }
 .navigation {
   width:1440px;
   padding:0 20px;
   margin: 0 auto;
   display: flex;
-  
   align-self:center;
-  height: 100px;
+  height: 150px;
+background-color: var(--seconary-bg-color);
 }
 .logotype {
   display: flex;
@@ -101,8 +106,8 @@ img{
 a.logo {
   display: inline-block;
   color: var(--accent-text-color);
-  font-family: 'Press Start 2P', cursive;
-  font-size: 25px;
+  font-family: 'Fieldguide', cursive;
+  font-size: 46px;
   line-height: 1.6em;
   text-transform: uppercase;
 }
@@ -169,16 +174,52 @@ min-width: 155px;
 /*hero*/
 .hero{
   text-align: center;
-}
-h1.hero-title {
-  margin-bottom: 40px;
-   font-weight: 700;
-  font-size: 60px;
-  text-transform: uppercase;
+  
+
 }
 
-/* section styles*/
-.section{
+.container-hero {
+  background-color: var(--primary-bg-color);
+  width:1440px;
+  margin:0 auto;
+  padding-bottom: 0px;
+}
+
+h1.hero-title {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Iceland', cursive;
+   font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: var(--titile-text-color);
+}
+.herobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 618px;
+  background-color: #eb00dd;
+  background-image: linear-gradient(180deg, rgba(30,19,70,1) 0%, rgba(38,21,52,0) 34%), url(../images/cybercitylogo21440x618.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.logobutton{
+  margin-top: 30px;
+  display: block;
+  padding: 0;
+  background: none;
+  border:none;
+}
+.mainlogo {
+  width: 500px;
+  fill:var(--accent-text-color);
+}
+
+/*section styles*/
+
+.section {
   padding-top: 100px;
 }
 .section.no-padding {
@@ -249,6 +290,9 @@ h1.hero-title {
 }
 .dovetypes > .item:nth-child(2n){
   flex-direction: row-reverse;
+ 
+}
+.dovetypes > .item:nth-child(2n+1){
   background: var(--seconary-bg-color);
 }
 .dovetypes > .item:nth-child(2n) .content {
@@ -268,12 +312,12 @@ h1.hero-title {
 }
 .container > .buycall
 {
-  flex-basis: 680px;
+  flex-basis: 800px;
   font-size: 48px;
 }
 .buy-nav{
   display: flex;
-  width: 680px;
+  width: 335px;
   justify-content: space-evenly;
 }
 /*merch section*/
@@ -291,11 +335,11 @@ margin-bottom: 10px;
 .merch .item:nth-child(3n) {
   margin-right: 0;
 }
-.merch .item:nth-last-child(-n+3)
+
 
 /*footer*/
-.page-footer {
-  background-color: var(--primary-bg-color);
+.footer {
+  background:var(--seconary-bg-color);
 }
 .fnavigation {
   width:1440px;
@@ -304,13 +348,48 @@ margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-self:center;
-  height: 100px;
+  height: 200px;
+  
 }
 .social-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  
 }
+
+.social-nav button {
+ display: block;
+ width: 72px; 
+ height: 72px;
+ padding: 0;
+ border: none;
+ background-color: transparent;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.socialbutton {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.button-icon {
+  width: 48px;
+  height: 48px;
+  fill:var(--primary-text-color)
+  
+}
+.button-icon:hover {
+  fill:var(--accent-text-color)
+}
+
+.social-nav .link-box + .link-box{
+  margin-left: 10px;
+}
+
 .footer-nav {
   display: flex;
   justify-content: space-evenly;
@@ -328,6 +407,9 @@ margin-bottom: 10px;
 }
 .footer-nav .link-box + .link-box{
   margin-left: 10px;
+}
+.footer-nav .link:hover {
+  color:var(--accent-text-color);
 }
 .copyright
 {

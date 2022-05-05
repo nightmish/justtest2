@@ -14,3 +14,11 @@
   src: url('../fonts/akashi-kgwd-webfont.woff') format('woff'),
     url('../fonts/akashi-kgwd-webfont.woff2') format('woff2');
 }
+@font-face {
+  font-family: "Fieldguide";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('../fonts/fieldguide-webfont.woff') format('woff'),
+  url('../fonts/fieldguide-webfont.woff2') format('woff2')
+}

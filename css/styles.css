@@ -4,6 +4,7 @@ bg color #130d30
 titile text color #eb00dd
 other text color rgba(235, 0, 221, 0.8)
 accent color #ffa438
+outline: 1px solid red;
 */
 
 /*font-family
@@ -20,7 +21,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
+  
 }
 :root {
   --primary-text-color: rgba(235, 0, 221, 0.8);
@@ -215,6 +216,12 @@ h1.hero-title {
 .mainlogo {
   width: 500px;
   fill:var(--accent-text-color);
+}
+
+.mainlogo:hover {
+-webkit-filter: drop-shadow( 0px 3px 2px var(--accent-text-color));
+filter: drop-shadow( 0px 3px 2px var(--accent-text-color) );
+transition:5000ms;
 }
 
 /*section styles*/
